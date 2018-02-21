@@ -787,7 +787,7 @@ public class Miner implements UncaughtExceptionHandler {
 					if (firstRun) { // failure!
 						coPrint.a(Attribute.BOLD).f(FColor.RED).ln("Unable to contact node in pool, please try again in a moment.").clr();
 						active = false;
-						break;
+						System.exit(1);
 					}
 				}
 				lastWorkerReport = System.currentTimeMillis();
